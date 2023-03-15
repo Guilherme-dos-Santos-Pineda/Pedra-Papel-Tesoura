@@ -56,6 +56,7 @@ body{
     align-items: center;
     height: 100vh;
     justify-content: space-around;
+    filter: blur(0px);
 }
 .conteudo{
     position: relative;
@@ -77,6 +78,7 @@ body{
     background-color: #e2e2e2;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .bordaUm{
     position: absolute;
@@ -116,22 +118,69 @@ body{
     align-items: center;
     justify-content: center;
 }
-
-.paper{
-    /* left: 0%;
-    top: 0%; */
-    /* border: 20px solid ; */
+.bordaUmStepDois{
+    position: static;
+    left: 0%;
+    top: 0%;
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    background-color: hsl(230, 89%, 62%);
+    box-shadow: inset 0px -10px 2px 0px rgba(40, 40, 41, 0.329);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.rock{
-    /* bottom: 0%; */
-    /* border: 20px solid hsl(349, 71%, 52%); */
+.bordaDoisStepDois{
+    position: static;
+    bottom: 0%;
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    background-color: hsl(349, 71%, 52%);
+    box-shadow: inset 0px -10px 2px 0px rgba(40, 40, 41, 0.329);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.scissor{
-    /* top: 0%;
-    right: 0%; */
-    /* border: 20px solid hsl(39, 89%, 49%); */
+.bordaTresStepDois{
+    position: static;
+    top: 0%;
+    right: 0%;
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    background-color: hsl(39, 89%, 49%);
+    box-shadow: inset 0px -10px 2px 0px rgba(40, 40, 41, 0.329);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.youPick{
+    color: white;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.theHousePicked{
+    color: white;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.conteudo2{
+    display: none;
 }
 .regras{
+    cursor: pointer;
     position: absolute;
     bottom: 0px;
     right: 0px;
@@ -145,6 +194,27 @@ body{
     border: 1px solid white;
     padding: 10px 30px 10px 30px;
     border-radius: 10px;
+}
+.regras2{
+    display: none;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 25px;
+    color: black;
+    border: 1px solid white;
+    padding: 21px 31px 31px 31px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: rgb(244, 244, 244);
+}
+.descr{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.x{
+    cursor: pointer;
+    color: #999999;
 }
 
 .attribution { font-size: 11px; text-align: center; }
