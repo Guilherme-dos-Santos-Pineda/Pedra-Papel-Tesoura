@@ -5,6 +5,10 @@ var container = document.querySelector(".container")
 var conteudo = document.querySelector(".conteudo")
 var conteudo2 = document.querySelector(".conteudo2")
 var youPick = document.querySelector(".youPick")
+var theHousePicked = document.querySelector(".theHousePicked")
+var paper = document.querySelector(".paper")
+var rock = document.querySelector(".rock")
+var scissor = document.querySelector(".scissor")
 var x = document.querySelector(".x")
 var a = 0
 var result
@@ -17,15 +21,45 @@ function gerarNumero(){
     result = Math.round(Math.random() * nr)
     return result
 }
+function pedra(){
+  youPick.innerHTML = `
+  <div>You Picked</div>
+  <div class="bordaDoisStepDois">
+    <div class="opc rock">
+      <img class="icone" src="./images/icon-rock.svg" alt="icon">
+    </div>
+  </div>
+  `
+}
+function papel(){
+  youPick.innerHTML = `
+  <div>You Picked</div>
+  <div class="bordaUmStepDois">
+    <div class="opc rock">
+      <img class="icone" src="./images/icon-paper.svg" alt="icon">
+    </div>
+  </div>
+  `
+}
+function tesoura(){
+  youPick.innerHTML = `
+  <div>You Picked</div>
+  <div class="bordaTresStepDois">
+    <div class="opc rock">
+      <img class="icone" src="./images/icon-scissors.svg" alt="icon">
+    </div>
+  </div>
+  `
+}
 
 botoes.forEach(e =>{
     e.addEventListener('click',(c)=>{
         console.log(gerarNumero())
         c = mudarTela(e)
         if(result >= 67 && result <= 100){
-            youPick.innerHTML = `
-            <div class="youPick">
-            <div>You Picked</div>
+          theHousePicked.innerHTML = `
+            <div class="theHousePicked">
+            <div>The House Picked</div>
             <div class="bordaTresStepDois p">
               <div class="opc rock">
                 <img class="icone" src="./images/icon-scissors.svg" alt="icon">
@@ -35,9 +69,9 @@ botoes.forEach(e =>{
             console.log("tesoura")
         }
         if(result >= 34 && result <=66){
-            youPick.innerHTML = `
-            <div class="youPick">
-            <div>You Picked</div>
+          theHousePicked.innerHTML = `
+            <div class="theHousePicked">
+            <div>The House Picked</div>
             <div class="bordaUmStepDois p">
               <div class="opc rock">
                 <img class="icone" src="./images/icon-paper.svg" alt="icon">
@@ -47,9 +81,9 @@ botoes.forEach(e =>{
             console.log("papel")
         }
         if(result <= 33){
-            youPick.innerHTML = `
-            <div class="youPick">
-            <div>You Picked</div>
+          theHousePicked.innerHTML = `
+            <div class="theHousePicked">
+            <div>The House Picked</div>
             <div class="bordaDoisStepDois p">
               <div class="opc rock">
                 <img class="icone" src="./images/icon-rock.svg" alt="icon">
