@@ -25,8 +25,8 @@ function pedra(){
   youPick.innerHTML = `
   <div>You Picked</div>
   <div class="bordaDoisStepDois">
-    <div class="opc rock">
-      <img class="icone" src="./images/icon-rock.svg" alt="icon">
+    <div class="opcStepDois rock">
+      <img class="icone2" src="./images/icon-rock.svg" alt="icon">
     </div>
   </div>
   `
@@ -35,8 +35,8 @@ function papel(){
   youPick.innerHTML = `
   <div>You Picked</div>
   <div class="bordaUmStepDois">
-    <div class="opc rock">
-      <img class="icone" src="./images/icon-paper.svg" alt="icon">
+    <div class="opcStepDois rock">
+      <img class="icone2" src="./images/icon-paper.svg" alt="icon">
     </div>
   </div>
   `
@@ -45,51 +45,61 @@ function tesoura(){
   youPick.innerHTML = `
   <div>You Picked</div>
   <div class="bordaTresStepDois">
-    <div class="opc rock">
-      <img class="icone" src="./images/icon-scissors.svg" alt="icon">
+    <div class="opcStepDois rock">
+      <img class="icone2" src="./images/icon-scissors.svg" alt="icon">
     </div>
   </div>
   `
 }
-
+function hole(){
+  theHousePicked.innerHTML = `
+  <div>The House Picked</div>
+  <div class='buraco'></div>`
+}
 botoes.forEach(e =>{
     e.addEventListener('click',(c)=>{
         console.log(gerarNumero())
         c = mudarTela(e)
+
         if(result >= 67 && result <= 100){
-          theHousePicked.innerHTML = `
-            <div class="theHousePicked">
-            <div>The House Picked</div>
-            <div class="bordaTresStepDois p">
-              <div class="opc rock">
-                <img class="icone" src="./images/icon-scissors.svg" alt="icon">
-              </div>
-            </div>
-            `
+          hole()
+            setTimeout(()=>{
+              theHousePicked.innerHTML = `
+              <div>The House Picked</div>
+              <div class="bordaTresStepDois">
+                <div class="opcStepDois rock">
+                  <img class="icone2" src="./images/icon-scissors.svg" alt="icon">
+                </div>
+              `
+            },2000)
             console.log("tesoura")
         }
+
         if(result >= 34 && result <=66){
-          theHousePicked.innerHTML = `
-            <div class="theHousePicked">
+          hole()
+          setTimeout(()=>{
+            theHousePicked.innerHTML = `
             <div>The House Picked</div>
-            <div class="bordaUmStepDois p">
-              <div class="opc rock">
-                <img class="icone" src="./images/icon-paper.svg" alt="icon">
+            <div class="bordaUmStepDois">
+              <div class="opcStepDois rock">
+                <img class="icone2" src="./images/icon-paper.svg" alt="icon">
               </div>
-            </div>
             `
+          },2000)
             console.log("papel")
         }
+
         if(result <= 33){
-          theHousePicked.innerHTML = `
-            <div class="theHousePicked">
+          hole() 
+          setTimeout(()=>{
+            theHousePicked.innerHTML = `
             <div>The House Picked</div>
-            <div class="bordaDoisStepDois p">
-              <div class="opc rock">
-                <img class="icone" src="./images/icon-rock.svg" alt="icon">
+            <div class="bordaDoisStepDois">
+              <div class="opcStepDois rock">
+                <img class="icone2" src="./images/icon-rock.svg" alt="icon">
               </div>
-            </div>
             `
+          },2000)
             console.log("pedra")
         }
     })
@@ -126,3 +136,8 @@ x.addEventListener('click', ()=>{
 // })
 
 // APARECER E SUMIR REGRAS FIM
+
+
+
+
+

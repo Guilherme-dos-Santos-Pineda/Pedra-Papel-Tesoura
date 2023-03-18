@@ -80,6 +80,18 @@ body{
     justify-content: center;
     cursor: pointer;
 }
+.opcStepDois{
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: flex;
+    box-shadow: inset 0px 5px 3px 0px rgb(110, 129, 164);
+    background-color: #e2e2e2;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
 .bordaUm{
     position: absolute;
     left: 0%;
@@ -123,8 +135,8 @@ body{
     left: 0%;
     top: 0%;
     border-radius: 50%;
-    width: 170px;
-    height: 170px;
+    width: 210px;
+    height: 210px;
     background-color: hsl(230, 89%, 62%);
     box-shadow: inset 0px -10px 2px 0px rgba(40, 40, 41, 0.329);
     display: flex;
@@ -135,8 +147,8 @@ body{
     position: static;
     bottom: 0%;
     border-radius: 50%;
-    width: 170px;
-    height: 170px;
+    width: 210px;
+    height: 210px;
     background-color: hsl(349, 71%, 52%);
     box-shadow: inset 0px -10px 2px 0px rgba(40, 40, 41, 0.329);
     display: flex;
@@ -148,13 +160,17 @@ body{
     top: 0%;
     right: 0%;
     border-radius: 50%;
-    width: 170px;
-    height: 170px;
+    width: 210px;
+    height: 210px;
     background-color: hsl(39, 89%, 49%);
     box-shadow: inset 0px -10px 2px 0px rgba(40, 40, 41, 0.329);
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.icone2{
+    height: 80px;
+    width: 72px;
 }
 .youPick{
     color: white;
@@ -165,6 +181,9 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 50px;
+    height: 300px;
+    justify-content: space-between;
 }
 .theHousePicked{
     color: white;
@@ -175,9 +194,59 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 50px;
+    height: 300px;
+    justify-content: space-between;
+}
+@keyframes mudarCor {
+    0%{background-color: #7878784e;}
+    100%{background-color: #3435353b;}
+}
+.buraco{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    /* background-color: #46464638; */
+    animation-name: mudarCor;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate-reverse;
+
+
 }
 .conteudo2{
     display: none;
+    height: 300px;
+    width: 750px;
+    justify-content:space-evenly;
+    flex-direction: row;
+    align-items: center;
+}
+.mensagemEPlayAgain{
+    display: flex;
+    height: 110px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: rgb(247, 247, 247);
+
+}
+.mesage{
+    font-size: 43px;
+}
+.playAgain{ 
+    display: flex;
+    height: 45px;
+    width: 180px;
+    border-radius: 10px;
+    background-color: rgb(252, 252, 252);
+    align-items: center;
+    justify-content: center;
+    color: var(--DarkText);
+}
+.playAgain:hover{
+    color: hsl(349, 71%, 52%);
 }
 .regras{
     cursor: pointer;
@@ -219,3 +288,32 @@ body{
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .bordaFinal1{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: aqua;
+  }
+  .bordaFinal2{
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background-color: rgb(13, 241, 161);
+  }
+  .bordaFinal3{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: rgb(60, 255, 0);
+  }
